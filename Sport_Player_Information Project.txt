@@ -256,5 +256,9 @@ WHERE
 ('Shravan', 'Vasudevan', '2000-04-24', 'Kerala');
 //inner join query project
 17) select * from cricket inner join chess on cricket.cid=chess.ch_id;
+//right join
+18) select * from chess right join table_tennis on chess.ch_id = table_tennis.tid;
+//left join;
+19) select*from cricket left join badminton on cricket.cid = badminton.bid;
 
 
