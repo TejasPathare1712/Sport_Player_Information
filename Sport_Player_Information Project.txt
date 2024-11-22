@@ -268,5 +268,7 @@ WHERE
 18) select * from chess right join table_tennis on chess.ch_id = table_tennis.tid;
 //left join query;
 19) select*from cricket left join badminton on cricket.cid = badminton.bid;
+// IN Operator
+20) select * from chess where state in('Maharashtra');
 
 
