@@ -1,13 +1,16 @@
 Sport Player Information Project
+//showing of exisisting databases in computer
 1) show databases;
+//Database Creation query
 2) CREATE database Sport_Information;
+//To create table query
 3)CREATE TABLE cricket (
     cid INT PRIMARY KEY AUTO_INCREMENT,
     first_Name VARCHAR(255),
     Last_Name VARCHAR(255),
     DOB DATE
 );
-
+// To insert values in table 
 4)INSERT INTO cricket (first_Name, Last_Name, DOB) VALUES 
 ('Virat', 'Kohli', '1988-11-05'),
 ('Rohit', 'Sharma', '1987-04-30'),
@@ -113,12 +116,13 @@ Sport Player Information Project
 ('Devdutt', 'Padikkal', '2000-07-07'),
 ('Sarfaraz', 'Khan', '1997-10-27');
 
+//selecting data from table in ascending order by dob
 6)select * from cricket ORDER BY DOB ;
-
+//For deleting data from table
 7) DELETE FROM cricket WHERE cid > 0;
-
+//find the data which first_name is staring from a
 8)select*from cricket where first_Name LIKE 'a%';
-
+--------------------------------------------------------------------------------------------------------------------------
 9)CREATE TABLE badminton (
     bid INT PRIMARY KEY AUTO_INCREMENT,
     First_Name VARCHAR(255),
@@ -176,12 +180,15 @@ Sport Player Information Project
 ('Poorvisha', 'S Ram', '1996-01-10', 'Tamil Nadu'),
 ('Srivedya', 'Gadde', '2001-10-03', 'Telangana'),
 ('Shivani', 'Bhagat', '1998-04-21', 'Goa');
+// To get the data from table where state = maharashtra
 
 11)  select*from badminton where State='Maharashtra';
+//for droping the column from table
 12) ALTER TABLE table_name
 DROP COLUMN column_name;
 13)ALTER TABLE table_name
 RENAME COLUMN old_column_name TO new_column_name;
+//to getting the age of player till current date
 14)SELECT 
     cid, 
     first_Name, 
@@ -192,6 +199,7 @@ FROM
     cricket
 WHERE 
     TIMESTAMPDIFF(YEAR, DOB, CURDATE()) > 30;
+--------------------------------------------------------------------------------------------------------------------------------
 15)CREATE TABLE chess (
     ch_id INT PRIMARY KEY AUTO_INCREMENT,
     first_name VARCHAR(255),
@@ -256,9 +264,9 @@ WHERE
 ('Shravan', 'Vasudevan', '2000-04-24', 'Kerala');
 //inner join query project
 17) select * from cricket inner join chess on cricket.cid=chess.ch_id;
-//right join
+//right join query
 18) select * from chess right join table_tennis on chess.ch_id = table_tennis.tid;
-//left join;
+//left join query;
 19) select*from cricket left join badminton on cricket.cid = badminton.bid;
 
 
